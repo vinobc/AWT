@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Handling with jQuery - Short hand helpers</title>
+    <link rel="stylesheet"  href="style.css" />
+    <script  src="jquery-3.3.1.js"></script>
+    <script>
+        
+        $(function() {
+           $("#block").hover(ftc,ftc);
+           $("#block").click(fc);
+            $("#block").dblclick(fdc);
+             $(window).resize(fr);
+            $("#block").one("click", function() {
+              $(this).css({
+                  borderWidth: "8px",
+                  borderColor: "red"
+              })
+            })
+            
+        });
+        
+        function ftc() {
+            $("#block").toggleClass("bg");
+        }
+        
+         function fc() {
+            $("#block").html("U clicked the div..")
+        }
+        
+         function fdc() {
+            $("#block").html("U double clicked the div..")
+        }
+        
+        function fr() {
+            $("#block").html("U resized the browser window..")
+        }
+    
+    
+        
+    </script>
+    
+    <style type='text/css'>
+        .bg {
+            background-color:aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event Handling with jQuery - Short hand helpers</h1>
+    <div id="info">
+
+        <ul>
+            <li><code>hover()</code></li>
+            <li><code>click()</code></li>
+            <li><code>dblclick()</code></li>
+            <li><code>resize()</code></li>
+        </ul>
+        
+        <div id="block" class="box">Hover over this block to change its background clor. Click, Double click and resize the main window </div><br/><br/>
+        
+        
+        
+    </div>
+</body>
+
+</html>

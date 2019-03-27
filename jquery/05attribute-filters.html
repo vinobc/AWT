@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Attribute Filters</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+//            $("p[id]").css("border", "2px solid blue");
+//            $("p[class=2]").css("border", "2px solid blue");
+//            $("p[id^=par]").css("border", "2px solid blue");
+              $("p[id^=par][lang*=-g]").css("border", "2px solid blue");
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Attribute Filters</h1>
+    <div id="info">
+
+        <p>Attribute filters are used to select elements from the DOM having attribute values.</p>
+        <p>examples:</p>
+        <ul id="list1">
+            <li class="1">[<i>a1</i>]</li>
+            <li class="1">[<i>a2</i>=v1]</li>
+            <li class="2">[<i>a3</i>^=v2]</li>
+        </ul>
+        <div id="div1">
+            <p class="1">This is para 1</p>
+            <p id="para1" lang="en-us">This is para 2</p>
+            <p class="2">This is para 3</p>
+            <p id="para4">This is para 4</p>
+            <p id="para5" lang="en-gb">This is para 5</p>
+        </div>
+    </div>
+</body>
+
+</html>

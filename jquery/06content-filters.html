@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Content Filters</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $("document").ready(function() {
+//            $("p:contains('2')").css("border", "2px solid blue");
+//            $("li:parent").css("border", "2px solid blue");
+//            $("div:has(p[class=1])").css("border", "2px solid blue");
+            
+//            $("div p:first-child").css("border", "2px solid blue");
+//            $("div p:last-of-type").css("border", "2px solid blue");
+//            $("div p:nth-child(5)").css("border", "2px solid blue");
+            $("div p:nth-child(3n)").css("border", "2px solid blue");
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Content Filters</h1>
+    <div id="info">
+        <p>These filters are used to get content that matches certain conditions, such as whether they contain certain content,  or whether they are in a certain position within their parent.</p>
+        <ul id="list1">
+            <li class="1"><code>:contains('<i>text</i>')</code></li>
+            <li class="1"><code>:parent</code></li>
+            <li class="2"><code>:has(<i>selector</i>)</code></li>
+            <li class="2"><code>:first-child</code></li>
+            <li class="1"><code>:last-of-type</code></li>
+            <li class="1"><code>:nth-child()</code></li>
+        </ul>
+        <div id="div1">
+            <p class="1">This is para 1</p>
+            <p id="para1">This is para 2</p>
+            <p class="b">This is para 3</p>
+            <p id="para4">This is para 4</p>
+            <p id="para5">This is para 5</p>
+            <p id="para6">This is para 6</p>
+            
+        </div>
+    </div>
+</body>
+
+</html>

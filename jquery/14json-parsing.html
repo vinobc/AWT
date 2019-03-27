@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>JSON Parsing with jQuery</title>
+    
+<!--    <script  src="jquery-3.3.1.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    
+    
+<script>
+    $(document).ready(function() {
+
+	$.getJSON('sites.json', function(result){
+
+			var data='';
+			for (var i = 0; i <= result.urls.length-1; i++) {
+				for (k in result.urls[i]) {
+					if (result.urls[i].hasOwnProperty(k)) {
+						data += '<li>' + 
+						'<a href = "' + result.urls[i][k] +
+						'">' + k + '</a>';
+						'</li>';
+			    }   
+				}
+			}
+        
+            $("#sites").html(data);
+			
+
+	}); 
+
+}); 
+
+</script>
+</head>
+
+    
+<body>
+
+<h2>Sites</h2>
+<ol id="sites">
+</ol>
+
+</body>
+</html>
+

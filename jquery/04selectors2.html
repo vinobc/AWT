@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selectors 2 - Tree selectors </title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-3.3.1.js"></script>
+    <script >
+        $("document").ready(function() {
+        // child selector 
+//        $("div > p").css("border", "3px solid red");
+        
+        // descendant selector 
+//        $("div p.1").css("border", "3px solid red");
+        
+        // next adjacent selector 
+//        $("ul + div").css("border", "3px solid red");
+        
+        // Next sibling selector 
+//        $(".2 ~ p").css("border", "3px solid red");
+    });
+
+    </script>
+</head>
+
+<body>
+    <h1>jQuery Tree Selectors</h1>
+    <div id="info">
+
+        <p>Tree Selectors are used to select elements based on their positions in the DOM tree</p>
+       
+        <ul id="list1">
+            <li><code>$("parent > child")</code></li>
+            <li><code>$("ancestor descendant")</code></li>
+            <li><code>$("previous + next")</code></li>
+            <li><code>$("previous ~ siblings")</code></li>
+        </ul>
+        <div id="div1">
+            <p class="1">This is para 1</p>
+            <p id="para1">This is para 2</p>
+            <p class="2">This is para 3</p>
+            <p id="para4" >This is para 4</p>
+            <p id="para5">This is para 5</p>
+        </div>
+    </div>
+</body>
+
+</html>

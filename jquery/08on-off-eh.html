@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Handling with jQuery - on/off</title>
+    <link rel="stylesheet"  href="style.css" />
+    <script  src="jquery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $("#block").on("mouseover mouseleave", bcc);
+            
+            $("#block").on("click", function(evt) {
+                $("#block").off("mouseover mouseleave", bcc);
+                 $("#block").html("<b>efect turned off..</b>");
+                 $("#block").removeClass("bg");     
+                
+            });
+            
+            $("#tf").on("keypress", function(evt) {
+                $("#tfe").text(String.fromCharCode(evt.charCode));
+                
+            })
+            
+        })
+        
+        function bcc(evt) {
+            $("#block").toggleClass("bg");
+        }
+        
+        
+    </script>
+    
+    <style type='text/css'>
+        .bg {
+            background-color:aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event Handling with jQuery - on/off</h1>
+    <div id="info">
+
+        <p><code>on()</code> and <code>off()</code> functions in jQuery.
+            Just pass the event name/s and the handler function to handle the event/s</p>
+        
+        <div id="block" class="box">Mouse over this block to change its background clor. Click on this block to remove the effect.</div><br/><br/>
+        
+        <input id="tf" type="text" />
+        
+        
+        
+        <p>You typed: <span id="tfe"></span></p>
+        
+    </div>
+</body>
+
+</html>

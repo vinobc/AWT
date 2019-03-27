@@ -1,0 +1,13 @@
+{
+	"name" : "sites",
+	"des" : "Sample Site links",
+	"urls" : [
+			{ "google"     : "http://www.google.com" },
+			{ "facebook" : "http://facebook.com" },
+			{ "yahoo"  : "http://www.yahoo.com" },
+			{ "twitter"  : "http://twitter.com" },
+			{ "ssn"  : "http://www.ssn.edu.in" }
+		]
+}
+
+

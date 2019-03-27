@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unified Event Object</title>
+    <link rel="stylesheet"  href="style.css" />
+    <script  src="jquery-3.3.1.js"></script>
+    <script>
+        
+        $(function() {
+           $("#b1").on("click dblclick", { name: "Box 1" }, function(evt) {
+                refresh(evt);
+                evt.stopPropagation();
+            });
+            $("#b2").on("click dblclick", { name: "Box 2" }, function(evt) {
+                refresh(evt);
+                evt.stopPropagation();
+            });
+            $("#b3").on("click dblclick", { name: "Box 3" }, function(evt) {
+                refresh(evt);
+                evt.stopPropagation();
+            });
+            $("div.b1b2b3").on("mouseenter", function(evt) {
+                refresh(evt);
+                evt.stopPropagation();
+            });
+            $("div.b1b2b3").on("mouseleave", function(evt) {
+                refresh(evt);
+                evt.stopPropagation();
+            });
+            $("div.b1b2b3").on("mousemove", function(evt) {
+                refresh(evt);
+                evt.stopPropagation();
+            });
+            
+            $("#input1").keypress(refresh);
+        });
+        
+        function refresh(evt) {
+            $(".ei span[id]").text("");
+            
+            $("#p-type").text(evt.type);
+            $("#p-which").text(evt.which);
+            $("#p-target").text(evt.target.id);
+            if (evt.relatedTarget)
+                $("#p-related").text(evt.relatedTarget.tagName+"#"+evt.relatedTarget.id);
+            $("#p-pageX").text(evt.pageX);
+            $("#p-pageY").text(evt.pageY);
+            if (evt.data)
+                $("#p-data").text(evt.data.name);
+        }
+    
+        
+    </script>
+    
+    <style type='text/css'>
+        .bg {
+            background-color:aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unified Event Object</h1>
+    <div id="info">
+        <div id="b1" class="b1b2b3 ib">Box1</div>
+        <div id="b2" class="b1b2b3 ib">Box2</div>
+        <div id="b3" class="b1b2b3 ib">Box3</div>
+        <div>Text Field: <input type="text" id="input1"></div>
+        <div id="eventInfo">
+            <h3>Event Information</h3>
+            <div class="ei">
+                <span class="props">Event type: </span><span class="props" id="p-type"></span>
+                <span class="props">Key/Button: </span><span class="props" id="p-which"></span>
+            </div>
+            <div class="ei">
+                <span class="props">Target: </span><span class="props" id="p-target"></span>
+                <span class="props">Related Target: </span><span class="props" id="p-related"></span>
+            </div>
+            <div class="ei">
+                <span class="props">pageX: </span><span class="props" id="p-pageX"></span>
+                <span class="props">pageY: </span><span class="props" id="p-pageY"></span>
+            </div>
+            <div class="ei">
+                <span class="props">Meta Key: </span><span class="props" id="p-metakey"></span>
+                <span class="props">data: </span><span class="props" id="p-data"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

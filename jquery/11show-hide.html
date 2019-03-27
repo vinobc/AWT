@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>show/hide/toggle</title>
+    <link rel="stylesheet"  href="style.css" />
+    <script  src="jquery-3.3.1.js"></script>
+    <script>
+       $(function() {
+        $("#b1").click(function() {
+            $("#d2").show("normal", "linear");
+            
+        });
+        $("#b2").click(function() {
+            $("#d2").hide("1000", "swing");
+        });
+        $("#b3").click(function() {
+           $("#d2").toggle("slow",done) ;
+        });
+            
+        })
+        
+        function done() {
+            $(this).html("<b>efects over..</b>");
+        }
+        
+        
+        
+        
+    </script>
+    
+    <style type="text/css">
+        p,
+        span {
+            font-size: 18pt;
+        }
+        
+        button {
+            margin: 6pt 6pt 0 0;
+        }
+    </style>
+</head>
+
+<body>
+   <h1>show/hide/toggle</h1>
+    <div id="info">
+        <div id="d2" class="b1b2b3">
+        </div>
+        <button id="b1">Show</button>
+        <button id="b2">Hide</button>
+        <button id="b3">Toggle</button>
+    </div>
+</body>
+
+</html>

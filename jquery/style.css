@@ -1,0 +1,96 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12pt;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+body > h1 {
+    background-color: darkolivegreen;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    margin:0;
+    padding-left: 10pt;
+    padding-right: 10pt;
+    padding-top:25pt;
+    padding-bottom: 15pt;
+    box-shadow: 0px 5px 5px 0px rgba(171,171,171,1);
+}
+
+#info {
+    margin: 10pt;
+}
+
+#div1 {
+    border: 4px dotted crimson;
+    background-color: antiquewhite;
+    font-size:14pt;
+    min-height: 200px;
+    margin: 20px;
+    padding: 30px;
+}
+
+.box {
+   position: relative;
+            width: 350px;
+            height: 280px;
+            margin: 2px;
+            padding: 30px;
+            background: #d3b8d0;
+            border: 1px solid red;
+            cursor: pointer;
+            left: auto;
+
+}
+
+.box p {
+    margin: 0 1pt 0 2pt
+}
+
+.b1b2b3 {
+    border: 4px solid #b3c;
+    background-color:bisque;
+    font-size:14pt;
+    padding-left: 8pt;
+    padding-right: 8pt;
+    margin-bottom: 8pt;
+    margin-right: 10;
+    margin-left: 10;
+    min-height: 200px;
+    width: 200px;
+}
+
+.ib {
+    display: inline-block;
+}
+
+code {
+    background-color:beige;
+    border: 1px dashed #a8a8a8;
+    border-radius: 3px;
+    padding: 1pt 2pt;
+    margin: 2pt;
+    font-family: "source-code-pro", Consolas, monospace;
+    font-size: .9em;
+}
+
+li {
+    line-height: 1.3em;
+}
+
+button {
+    font-size: 14pt;
+    margin: 8px;
+}
+
+#eventInfo {
+    border: 2px dashed #a8b;
+    margin-top: 20pt;
+    padding: 2pt;
+}
+
+.props {
+    width: 200px;
+    display: inline-block
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fading</title>
+    <link rel="stylesheet"  href="style.css" />
+    <script  src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#fadein").click(function() {
+                $("#d").fadeIn("normal");
+            });
+            $("#fadeout").click(function() {
+                $("#d").fadeOut("normal");
+            });
+            $("#fade24").click(function() {
+                $("#d").fadeTo("slow", 0.4);
+            });
+            $("#fade28").click(function() {
+                $("#d").fadeTo("slow", 0.8, done);
+            });
+            $("#pulse").click(function() {
+                $("#d").fadeTo("fast", 0.4)
+                            .fadeTo("fast", 1.0)
+                            .fadeTo("fast", 0.4)
+                            .fadeTo("fast", 1.0);
+            });
+            $("#slide-up").click(function() {
+                $("#d").slideUp("1000", "swing");
+            });
+             $("#slide-down").click(function() {
+                $("#d").slideDown();
+            });
+             $("#slide-tg").click(function() {
+                $("#d").slideToggle();
+            });
+             $("#growwr").click(function() {
+                $("#d").animate({ width: "600px" }, 1000);
+            });
+             $("#shrink").click(function() {
+                $("#d").animate({ width: "80px" }, 1000);
+            });
+            $("#growa").click(function() {
+                $("#d").animate({ fontSize: "42pt" }, 1000);
+            });
+             $("#move").click(function() {
+                $("#d").animate({ left: "500" }, 1000, "swing");
+            });
+            $("#multiple").click(function() {
+                $("#d").animate({ left: "600", fontSize: "54pt",width: "600px"}, 2000, "swing");
+            });
+            
+        });
+        
+        function done() {
+            $(this).text("Fading effect complete");
+        }
+    </script>
+    <style type="text/css">
+        p,
+        span {
+            font-size: 16pt;
+        }
+        
+        button {
+            margin: 5pt 5pt 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fading-Sliding-Custom</h1>
+    <div id="info">
+        <div id="d" class="box">Animation
+        </div>
+        <button id="fadein">Fade In</button>
+        <button id="fadeout">Fade Out</button>
+        <button id="fade24">Fade To 40%</button>
+        <button id="fade28">Fade To 80%</button>
+        <button id="pulse">Vibrate</button><br/>
+        <button id="slide-up">Slide up</button>
+        <button id="slide-down">Slide down</button>
+        <button id="slide-tg">Slide toggle</button><br/>
+        <button id="growwr">grow width </button>
+        <button id="shrink">shrink </button>
+        <button id="growa">grow animation</button>
+        <button id="move">move</button>
+        <button id="multiple">multiple</button>
+    </div>
+</body>
+
+</html>

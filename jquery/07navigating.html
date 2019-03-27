@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigating the DOM with jQuery</title>
+    <link rel="stylesheet"  href="style.css" />
+    <script  src="jquery-3.3.1.js"></script>
+    <script >
+        $("document").ready(function() {
+            
+
+//        $("#div1").children().css("border", "3px solid blue");
+//            var p2 = $("#p2");
+//            $(p2).prev().css("border", "2px solid red");
+//            $(p2).next().css("border", "2px solid green");
+//            $(p2).parent().css("border", "2px solid blue");
+//            $(p2).parents().css("border", "2px solid blue");
+//            $(p2).parentsUntil($("body")).css("border", "2px solid blue");
+           
+//            $("#div1").find("#p4").css("border", "2px solid red");
+            
+             var b=4;
+             var ml=0;
+            var mr=0;
+             $("#div1 p").each(function (i,e) {
+                 $(e).css("border", b+"px solid red").css("margin-left", ml).css("margin-right", mr);
+                 b += 2;
+                 ml += 100;
+                 mr += 100;
+             })
+            
+            
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Navigating the DOM with jQuery</h1>
+    <div id="info">
+        <p>The DOM of a Web page refers to Document Object Model that is organized as a tree structure. The elements are refered to their positions relative to other elements.</p>
+        
+        <ul id="list1">
+            <li><code>children()</code></li>
+            <li><code>prev(), next(), parent(), parents(), parentsUntil()</code></li>
+            <li><code>find()</code></li>
+            <li><code>each()</code></li>
+        </ul>
+        <div id="div1">
+            <p class="1">This is para 1</p>
+            <p id="p2">This is para 2</p>
+            <p class="2">This is para 3</p>
+            <p id="p4">This is para 4</p>
+            <p id="p5">This is para 5</p>
+        </div>
+    </div>
+</body>
+
+</html>

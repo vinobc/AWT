@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Selectors</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $("document").ready(function() {
+//            $("p").css("border","3px solid blue");
+//            $(".1").css("border","3px solid blue");
+            //$("#div1").css("border","3px solid blue");
+            //$("p.2").css("border","3px solid blue");
+        });
+    </script>
+</head>
+
+<body>
+    <h1>jQuery Selectors</h1>
+    <div id="info">
+
+        <p>Selectors selects content in a Web page.</p>
+        <p>Selectors use syntax similar to CSS.</p>
+        <ul id="list1">
+            <li class="1"><code>$("<i>tag1</i>")</code></li><br>
+            <li class="1"><code>$("<i>.class1</i>")</code></li><br>
+            <li class="2"><code>$("#id1")</code></li><br>
+            <li class="2"><code>$("<i>tag1.class1</i>")</code></li>
+        </ul>
+        <div id="div1">
+            <p class="1">Para 1</p>
+            <p id="p1">Para 2</p>
+            <p class="2">Para 3</p>
+            <p id="p4">Para 4</p>
+            <p id="p5">Para 5</p>
+            <p class="1">Para 6</p>
+        </div>
+    </div>
+</body>
+
+</html>
