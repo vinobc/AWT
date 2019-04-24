@@ -1,0 +1,13 @@
+<div class="media">
+    <!-- <img class="mr-3 rounded img-fliud align-self-center" style="width: 50px;" src="{{ './assets/images/' + emp.imglocn + '.png'}}" -->
+    <!-- alt="{{emp.name}}"> -->
+
+    <img class="mr-3 rounded img-fliud align-self-center" style="width: 50px;" [src]="'./assets/images/' + emp.imglocn + '.png'"
+    alt="{{emp.name}}">
+
+    <div class="media-body align-self-center">
+      <h5 class="m-0">{{ emp.name }}</h5>
+      {{emp.desig}} <br>
+      {{emp.dept}}
+    </div>
+  </div>

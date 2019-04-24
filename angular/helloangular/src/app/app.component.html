@@ -1,0 +1,34 @@
+<div class="position-relative container">
+
+<div class="row justify-content-center">
+  <div class="card bg-success card mt-sm-3 col-md-6">
+    <div class="card-body">
+      <h3 class="mb-0 text-center text-warning">SSN Employee Repo.</h3>
+      <div class="form-group">
+        <div class="form-label text-center text-light mt-sm-3"
+        *ngIf="greet"><strong>{{ greet + ' !!'}}</strong></div>
+        <input class="form-control mt-3" type="text"
+        [(ngModel)]="greet">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="position-absolute container" style="left: 0; z-index:10">
+  <div class="row justify-content-center">
+    <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
+      <div class="list-group" *ngIf = "greet">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start"
+        *ngFor="let e of (employee | findEmployee: greet )"
+        (click)="displayEmployee($event, e)"
+        [style.backgroundColor]="e.bg ? '#CDE': '#FFF'">
+        <app-emp-pics [emp]="e"></app-emp-pics>
+            
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<app-about-emp *ngIf = "this_e" [emp]="this_e"></app-about-emp>
+
+</div>

@@ -1,0 +1,14 @@
+[
+    {
+    "name":"Dr. T. Nagarajan",
+    "imglocn":"tn-it",
+    "desig":"Professor and Head of the Department",
+    "dept":"Information Technology"
+  },
+  {
+    "name":"Dr. R. Srinivasan",
+    "imglocn":"rs-it",
+    "desig":"Professor",
+    "dept":"Information Technology"
+  }
+]
