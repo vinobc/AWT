@@ -7,6 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <title>Form</title>
+  
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -18,12 +19,49 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-startup-image" href="/apple-touch-icon.png">
+<script src="js/main.js"></script>
+
+<style>
+    body {background-color: powderblue;}
+    h2   {color: blue;}
+    div    {color:saddlebrown;}
+    #a2hs {
+      display: block;
+      margin-top: 22px;
+      padding: 0px;
+      border: 1px blueviolet dashed;
+      display: block;
+    }
+    #a2hs img {
+      max-width: 30px;
+      margin: 24px;
+      float: left;
+    }
+    #a2hs button {
+      background-color: blue;
+      color: white;
+      border: 1px yellow solid;
+      margin: 6px 12px;
+    }
+</style>
+
 </head>
 <body>
+    <section id="a2hs">
+        <h4>Install this App</h4>
+        <img src="android-chrome-192x192.png" alt="Form" />
+        Add this Form to home screen <br>
+        <a href="javascript:void(0)" onClick="dismiss()" style="text-decoration:none;">No</a>
+        <button onClick="install()">Yes</button>
+      </section>
 
 <div class="container">
 
 <h2>Employee Information</h2>
+
+
+
+
 
 <form>
 
@@ -87,8 +125,15 @@
   <button class="btn btn-primary" type="submit">Submit</button>
 </form>
 
+<aside id="notnTest">
+  <h3>
+    &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://in.yahoo.com/?p=us" target="_blank" rel="noopener">Yahoo</a>
+  </h3>
+</aside>
+
 
 </div><!-- content container -->
+
 
 <script src="js/jquery.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
